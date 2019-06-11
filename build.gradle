@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+}
+
+group 'tech.testra'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven {
+        url  "https://jcenter.bintray.com"
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'tech.testra', name: 'testra-java-cucumberv2-plugin', version: '0.22'
+    // https://mvnrepository.com/artifact/org.testng/testng
+    compile group: 'org.testng', name: 'testng', version: '6.14.3'
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-java
+    compile group: 'io.cucumber', name: 'cucumber-java', version: '2.4.0'
+    // https://mvnrepository.com/artifact/org.assertj/assertj-core
+    testCompile group: 'org.assertj', name: 'assertj-core', version: '3.12.2'
+// https://mvnrepository.com/artifact/io.gsonfire/gson-fire
+    compile group: 'io.gsonfire', name: 'gson-fire', version: '1.8.3'
+
+
+
+}
+
+task testAPI(type: Test) {
+
+    def testSuitesPath = "src/test/resources/testng.xml"
+    useTestNG() {
+        suites testSuitesPath
+    }
+    testLogging.showStandardStreams = true
+    jvmArgs '-da'
+    System.setProperty( "basePath", rootProject.projectDir.toString() )
+    systemProperties System.getProperties()
+    ignoreFailures = true
+}

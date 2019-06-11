@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="runners.TestRunner" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-06-11T13:41:17" hostname="WHM5003955.local" time="0.86">
+  <properties/>
+  <testcase name="runScenario[0](&quot;This is my lovely test scenario&quot;, &quot;This is my lovely test feature&quot;)" classname="runners.TestRunner" time="0.86"/>
+  <system-out><![CDATA[14:41:16.990 [Test worker] INFO  t.t.jvm.commons.util.PropertyHelper - Loading property resource : .testra
+14:41:17.262 [Test worker] INFO  t.t.java.client.TestraRestClient - Project ID found
+14:41:17.263 [Test worker] INFO  t.t.jvm.plugin.cucumberv2.Testra - Project ID is 5cffaeeec9e77c0007cd9cf5
+File already exists.
+14:41:17.558 [Test worker] INFO  t.t.jvm.plugin.cucumberv2.Testra - Execution ID is: 5cffaf7dc9e77c0007cd9cf6
+14:41:17.558 [Test worker] INFO  t.t.jvm.plugin.cucumberv2.Testra - http://localhost:8082/api/v1/projects/5cffaeeec9e77c0007cd9cf5/executions/5cffaf7dc9e77c0007cd9cf6
+14:41:17.561 [Test worker] INFO  t.t.jvm.plugin.cucumberv2.Testra - Scenario setup - Begin
+14:41:17.562 [Test worker] INFO  t.t.jvm.plugin.cucumberv2.Testra - Initialised common data instance for scenario
+14:41:17.562 [Test worker] INFO  t.t.jvm.plugin.cucumberv2.Testra - Scenario setup - End
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
